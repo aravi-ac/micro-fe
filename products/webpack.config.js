@@ -8,10 +8,10 @@ module.exports = {
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'products',
+            name: 'mfeProducts',
             filename: 'remoteEntry.js',
             exposes: {
-                './productsIndex': './src/index'
+                './productsIndex': './src/bootstrap'
             },
             shared: ['faker']
         }),
